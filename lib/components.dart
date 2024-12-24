@@ -89,3 +89,38 @@ class BorderText extends StatelessWidget {
     );
   }
 }
+
+// Card Widget
+class CardWidget extends StatelessWidget {
+  final imageLoc;
+  final cardName;
+  const CardWidget(this.cardName, this.imageLoc, {super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Card(
+      color: Colors.white,
+      elevation: 30.0,
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15.0)),
+      shadowColor: Colors.tealAccent,
+      child: Padding(
+        padding: const EdgeInsets.all(15.0),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Image.asset(
+              imageLoc,
+              height: 200,
+              width: 200,
+              fit: BoxFit.contain,
+            ),
+            SizedBox(
+              height: 10,
+            ),
+            SansBold(cardName, 15)
+          ],
+        ),
+      ),
+    );
+  }
+}
