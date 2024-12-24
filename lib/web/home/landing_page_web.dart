@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/components.dart';
 import 'package:portfolio/web/home/about_me_web.dart';
+import 'package:portfolio/web/home/contactMe.dart';
 import 'package:portfolio/web/home/whatIDo.dart';
 
 class LandingPageWeb extends StatefulWidget {
@@ -14,6 +15,7 @@ class _LandingPageWebState extends State<LandingPageWeb> {
   @override
   Widget build(BuildContext context) {
     var deviceHeight = MediaQuery.of(context).size.height;
+    var deviceWidth = MediaQuery.of(context).size.width;
     return Scaffold(
       backgroundColor: Colors.white,
       drawer: Drawer(),
@@ -123,7 +125,11 @@ class _LandingPageWebState extends State<LandingPageWeb> {
             ),
           ),
           AboutMeWeb(deviceHeight / 1.5, deviceHeight / 1.7),
-          Whatido(deviceHeight / 1.3)
+          Whatido(deviceHeight / 1.3),
+          Contactme(
+            deviceHeight,
+            deviceWidth/1.5
+          )
         ],
       ),
     );
