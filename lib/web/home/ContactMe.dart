@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/components.dart';
+import 'package:portfolio/web/utils/buttons.dart';
 import 'package:portfolio/web/utils/textField.dart';
 
 class Contactme extends StatelessWidget {
@@ -20,7 +21,7 @@ class Contactme extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  Textfield( 
+                  Textfield(
                       hintLabel: "First Name",
                       hintText: "Please type first name",
                       width: 350),
@@ -53,7 +54,9 @@ class Contactme extends StatelessWidget {
             hintText: "Please type your message",
             width: messageWidth,
             maxlines: 10,
-          )
+          ),
+          Materialbutton(buttonHeight: 60.0, minButtonWidth: 200.0),
+          SizedBox(height: 20.0,)
         ],
       ),
     );
