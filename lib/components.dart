@@ -65,16 +65,27 @@ class SansBold extends StatelessWidget {
 class Sans extends StatelessWidget {
   final text;
   final size;
-  const Sans(this.size,this.text,{super.key});
+  const Sans(this.size, this.text, {super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Text(text,
-        style:
-            GoogleFonts.openSans(fontSize: size));
+    return Text(text, style: GoogleFonts.openSans(fontSize: size));
   }
 }
 
+// Bordered text
+class BorderText extends StatelessWidget {
+  final textData;
+  const BorderText(this.textData, {super.key});
 
-
-
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+      decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(5),
+          border: Border.all(color: Colors.tealAccent, width: 2)),
+      child: Sans(15, textData),
+    );
+  }
+}

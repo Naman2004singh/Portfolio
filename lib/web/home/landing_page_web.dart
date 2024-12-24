@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:portfolio/components.dart';
+import 'package:portfolio/web/home/about_me_web.dart';
 
 class LandingPageWeb extends StatefulWidget {
   const LandingPageWeb({super.key});
@@ -121,10 +122,9 @@ class _LandingPageWebState extends State<LandingPageWeb> {
               ],
             ),
           ),
+          AboutMeWeb(deviceHeight / 1.5, deviceHeight / 1.7),
         ],
       ),
     );
   }
 }
-
-
