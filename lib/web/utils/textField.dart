@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:portfolio/components.dart';
 
@@ -7,7 +8,12 @@ class Textfield extends StatelessWidget {
   final hintLabel;
   final width;
   final maxlines;
-  const Textfield({super.key, required this.hintLabel, required this.hintText, required this.width,this.maxlines});
+  const Textfield(
+      {super.key,
+      required this.hintLabel,
+      required this.hintText,
+      required this.width,
+      this.maxlines});
 
   @override
   Widget build(BuildContext context) {
@@ -22,8 +28,26 @@ class Textfield extends StatelessWidget {
         SizedBox(
             width: width,
             child: TextFormField(
+              inputFormatters: [
+                FilteringTextInputFormatter.allow(RegExp('[a-z A-Z0-9@.]')),
+                LengthLimitingTextInputFormatter(50)
+              ],
+              validator: (text) {
+                if (RegExp("\\bnaman\\b", caseSensitive: false)
+                    .hasMatch(text.toString())) {
+                  return "Match found";
+                }
+              },
+              autovalidateMode: AutovalidateMode.onUserInteraction,
               maxLines: maxlines,
               decoration: InputDecoration(
+                  focusedErrorBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(10.0),
+                      borderSide: BorderSide(color: Colors.red)),
+                  errorBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(10.0),
+                    borderSide: BorderSide(color: Colors.red)
+                  ),
                   enabledBorder: OutlineInputBorder(
                       borderSide: BorderSide(color: Colors.teal, width: 1),
                       borderRadius: BorderRadius.circular(10.0)),
