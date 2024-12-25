@@ -18,18 +18,18 @@ class Whatido extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               CardAnimation(
-                imagePath: "images/web.jpg",
+                imagePath: "assets/images/web.jpg",
                 text: "Web development",
               ),
               CardAnimation(
                 text: "App development",
-                imagePath: "images/app.png",
+                imagePath: "assets/images/app.png",
                 fit: BoxFit.contain,
                 reverse: true,
               ),
               CardAnimation(
                   text: "Back-end development",
-                  imagePath: "images/firebase.png")
+                  imagePath: "assets/images/firebase.png")
             ],
           )
         ],

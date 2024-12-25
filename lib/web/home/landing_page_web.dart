@@ -116,7 +116,7 @@ class _LandingPageWebState extends State<LandingPageWeb> {
                     backgroundColor: Colors.black,
                     radius: 183.0,
                     child: CircleAvatar(
-                      backgroundImage: AssetImage("images/circleImage.png"),
+                      backgroundImage: AssetImage("assets/images/circleImage.png"),
                       radius: 180,
                     ),
                   ),

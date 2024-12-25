@@ -15,7 +15,7 @@ class AboutMeWeb extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Image.asset(
-            "images/web.jpg",
+            "assets/images/web.jpg",
             height: imageHeight,
           ),
           Column(
