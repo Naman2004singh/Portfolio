@@ -47,7 +47,7 @@ class _LandingPageWebState extends State<LandingPageWeb> {
       ),
       body: ListView(
         children: [
-          Container(
+          SizedBox(
             height: deviceHeight - 56,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -124,12 +124,9 @@ class _LandingPageWebState extends State<LandingPageWeb> {
               ],
             ),
           ),
-          AboutMeWeb(deviceHeight / 1.5, deviceHeight / 1.7),
+          AboutMeWeb(deviceHeight / 1.5, deviceWidth / 1.9),
           Whatido(deviceHeight / 1.3),
-          Contactme(
-            deviceHeight,
-            deviceWidth/1.5
-          )
+          Contactme(deviceHeight, deviceWidth / 1.5)
         ],
       ),
     );

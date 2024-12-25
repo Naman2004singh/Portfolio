@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/components.dart';
+import 'package:portfolio/web/utils/animationController.dart';
 
 class Whatido extends StatelessWidget {
   final DoHeight;
@@ -16,9 +17,19 @@ class Whatido extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              CardWidget("Web development", "images/web.jpg"),
-              CardWidget("App development", "images/app.png"),
-              CardWidget("Back-end development", "images/firebase.png")
+              CardAnimation(
+                imagePath: "images/web.jpg",
+                text: "Web development",
+              ),
+              CardAnimation(
+                text: "App development",
+                imagePath: "images/app.png",
+                fit: BoxFit.contain,
+                reverse: true,
+              ),
+              CardAnimation(
+                  text: "Back-end development",
+                  imagePath: "images/firebase.png")
             ],
           )
         ],
