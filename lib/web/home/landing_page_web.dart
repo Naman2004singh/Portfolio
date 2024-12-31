@@ -18,7 +18,9 @@ class _LandingPageWebState extends State<LandingPageWeb> {
     var deviceWidth = MediaQuery.of(context).size.width;
     return Scaffold(
       backgroundColor: Colors.white,
-      drawer: Drawer(),
+      drawer: Drawer(
+        backgroundColor: Colors.white,
+      ),
       appBar: AppBar(
         backgroundColor: Colors.white,
         elevation: 0.0,

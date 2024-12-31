@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/components.dart';
-import 'package:portfolio/web/utils/animationController.dart';
+import 'package:portfolio/utils/animationController.dart';
 
 class Whatido extends StatelessWidget {
   final DoHeight;

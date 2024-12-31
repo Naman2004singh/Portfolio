@@ -53,7 +53,7 @@ class AboutMeWeb extends StatelessWidget {
                   SizedBox(
                     width: 10,
                   ),
-                  BorderText("Windows")
+                  BorderText("Windows"),
                 ],
               ),
             ],
