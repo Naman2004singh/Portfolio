@@ -62,6 +62,22 @@ class SansBold extends StatelessWidget {
   }
 }
 
+class SansBoldColor extends StatelessWidget {
+  final String text;
+  final double? size;
+  final Color color;
+  const SansBoldColor(
+      {super.key, required this.color, this.size, required this.text});
+
+  @override
+  Widget build(BuildContext context) {
+    return Text(
+      text,
+      style: GoogleFonts.openSans(fontSize: size, color: color),
+    );
+  }
+}
+
 class Sans extends StatelessWidget {
   final text;
   final size;
@@ -89,4 +105,3 @@ class BorderText extends StatelessWidget {
     );
   }
 }
-

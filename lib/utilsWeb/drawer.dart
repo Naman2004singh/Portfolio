@@ -3,8 +3,6 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:portfolio/components.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-class DrawerMenu extends StatelessWidget {
-  const DrawerMenu({super.key});
 
   urlLauncher(IconData iconData, String navigateUrl) {
     return IconButton(
@@ -16,6 +14,9 @@ class DrawerMenu extends StatelessWidget {
           size: 35,
         ));
   }
+  
+class DrawerMenu extends StatelessWidget {
+  const DrawerMenu({super.key});
 
   @override
   Widget build(BuildContext context) {

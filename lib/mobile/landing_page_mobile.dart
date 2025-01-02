@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio/utilsMobile/mobiledrawer.dart';
 
 class LandingPageMobile extends StatefulWidget {
   const LandingPageMobile({super.key});
@@ -18,12 +19,7 @@ class _LandingPageMobileState extends State<LandingPageMobile> {
         elevation: 0.0,
         iconTheme: IconThemeData(size: 35.0, color: Colors.black),
       ),
-      endDrawer: Drawer(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-        ),
-      ),
+      endDrawer: Mobiledrawer(screenWidthMobile: deviceWidthMobile,)
     );
   }
 }
