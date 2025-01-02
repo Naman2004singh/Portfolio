@@ -10,6 +10,20 @@ class LandingPageMobile extends StatefulWidget {
 class _LandingPageMobileState extends State<LandingPageMobile> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    var deviceWidthMobile = MediaQuery.of(context).size.width;
+    return Scaffold(
+      backgroundColor: Colors.white,
+      appBar: AppBar(
+        backgroundColor: Colors.transparent,
+        elevation: 0.0,
+        iconTheme: IconThemeData(size: 35.0, color: Colors.black),
+      ),
+      endDrawer: Drawer(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+        ),
+      ),
+    );
   }
 }

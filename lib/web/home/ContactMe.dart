@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/components.dart';
-import 'package:portfolio/utils/buttons.dart';
-import 'package:portfolio/utils/textField.dart';
+import 'package:portfolio/utilsWeb/buttons.dart';
+import 'package:portfolio/utilsWeb/textField.dart';
 
 class Contactme extends StatelessWidget {
   final contactMeHeight;
