@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/mobile/landing_page_mobile.dart';
+import 'package:portfolio/mobile/home/landing_page_mobile.dart';
 import 'package:portfolio/web/home/landing_page_web.dart';
 
 class Routes {
