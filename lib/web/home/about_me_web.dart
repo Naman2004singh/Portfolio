@@ -4,12 +4,15 @@ import 'package:portfolio/components.dart';
 class AboutMeWeb extends StatelessWidget {
   final aboutSectionHeight;
   final imageHeight;
-  const AboutMeWeb(this.aboutSectionHeight, this.imageHeight, {super.key});
+  final aboutSectionWidth;
+  const AboutMeWeb(this.aboutSectionHeight, this.imageHeight,
+      {super.key, this.aboutSectionWidth});
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       height: aboutSectionHeight,
+      width: aboutSectionWidth,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         crossAxisAlignment: CrossAxisAlignment.center,
@@ -35,35 +38,36 @@ class AboutMeWeb extends StatelessWidget {
               SizedBox(
                 height: 10,
               ),
-              Row(
+              Wrap(
+                alignment: WrapAlignment.center,
+                //runSpacing: 10.0,
+                spacing: 10.0,
                 children: [
-                  BorderText("Flutter",
-                  hPadding: 20,
-                  vPadding: 10,),
-                  SizedBox(
-                    width: 10,
+                  BorderText(
+                    "Flutter",
+                    hPadding: 20,
+                    vPadding: 10,
                   ),
-                  BorderText("firebase",
-                  hPadding: 20,
-                  vPadding: 10,),
-                  SizedBox(
-                    width: 10,
+                  BorderText(
+                    "firebase",
+                    hPadding: 20,
+                    vPadding: 10,
                   ),
-                  BorderText("Android",
-                  hPadding: 20,
-                  vPadding: 10,),
-                  SizedBox(
-                    width: 10,
+                  BorderText(
+                    "Android",
+                    hPadding: 20,
+                    vPadding: 10,
                   ),
-                  BorderText("iOS",
-                  hPadding: 20,
-                  vPadding: 10,),
-                  SizedBox(
-                    width: 10,
+                  BorderText(
+                    "iOS",
+                    hPadding: 20,
+                    vPadding: 10,
                   ),
-                  BorderText("Windows",
-                  hPadding: 20,
-                  vPadding: 10,),
+                  BorderText(
+                    "Windows",
+                    hPadding: 20,
+                    vPadding: 10,
+                  ),
                 ],
               ),
             ],

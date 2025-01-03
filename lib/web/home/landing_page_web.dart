@@ -144,7 +144,7 @@ class _LandingPageWebState extends State<LandingPageWeb> {
               ],
             ),
           ),
-          AboutMeWeb(deviceHeight / 1.5, deviceWidth / 1.9),
+          AboutMeWeb(deviceHeight / 1.5, deviceWidth / 1.9,aboutSectionWidth: deviceWidth,),
           Whatido(deviceHeight / 1.3),
           Contactme(deviceHeight, deviceWidth / 1.5)
         ],
