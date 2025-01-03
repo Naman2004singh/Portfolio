@@ -27,7 +27,7 @@ class Landingmobile extends StatelessWidget {
           height: 35.0,
         ),
         Padding(
-          padding: const EdgeInsets.only(left: 15),
+          padding: const EdgeInsets.only(left: 20.0),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.start,

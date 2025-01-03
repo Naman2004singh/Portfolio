@@ -37,23 +37,33 @@ class AboutMeWeb extends StatelessWidget {
               ),
               Row(
                 children: [
-                  BorderText("Flutter"),
+                  BorderText("Flutter",
+                  hPadding: 20,
+                  vPadding: 10,),
                   SizedBox(
                     width: 10,
                   ),
-                  BorderText("firebase"),
+                  BorderText("firebase",
+                  hPadding: 20,
+                  vPadding: 10,),
                   SizedBox(
                     width: 10,
                   ),
-                  BorderText("Android"),
+                  BorderText("Android",
+                  hPadding: 20,
+                  vPadding: 10,),
                   SizedBox(
                     width: 10,
                   ),
-                  BorderText("iOS"),
+                  BorderText("iOS",
+                  hPadding: 20,
+                  vPadding: 10,),
                   SizedBox(
                     width: 10,
                   ),
-                  BorderText("Windows"),
+                  BorderText("Windows",
+                  hPadding: 20,
+                  vPadding: 10,),
                 ],
               ),
             ],

@@ -92,12 +92,14 @@ class Sans extends StatelessWidget {
 // Bordered text
 class BorderText extends StatelessWidget {
   final textData;
-  const BorderText(this.textData, {super.key});
+  final double hPadding;
+  final double vPadding;
+  const BorderText(this.textData, {super.key, required this.hPadding, required this.vPadding});
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+      padding: EdgeInsets.symmetric(horizontal: hPadding, vertical: vPadding),
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(5),
           border: Border.all(color: Colors.tealAccent, width: 2)),

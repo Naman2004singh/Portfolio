@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio/mobile/home/aboutMobile.dart';
 import 'package:portfolio/mobile/home/landingmobile.dart';
 import 'package:portfolio/utilsMobile/mobiledrawer.dart';
 
@@ -24,7 +25,18 @@ class _LandingPageMobileState extends State<LandingPageMobile> {
         screenWidthMobile: deviceWidthMobile,
       ),
       body: ListView(
-        children: const [Landingmobile()],
+        children: const [
+          //Intro Section
+          Landingmobile(),
+          SizedBox(
+            height: 90.0,
+          ),
+          //About section
+          Aboutmobile(),
+          SizedBox(
+            height: 60.0,
+          )
+        ],
       ),
     );
   }
