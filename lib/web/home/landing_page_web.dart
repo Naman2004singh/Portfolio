@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/components.dart';
+import 'package:portfolio/utilsWeb/appBar.dart';
 import 'package:portfolio/utilsWeb/drawer.dart';
 import 'package:portfolio/web/home/about_me_web.dart';
 import 'package:portfolio/web/home/contactMe.dart';
@@ -30,39 +31,7 @@ class _LandingPageWebState extends State<LandingPageWeb> {
           color: Colors.black,
           size: 25,
         ),
-        title: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: const [
-            Spacer(
-              flex: 2,
-            ),
-            TabsWeb(
-              "Home",
-              route: "/",
-            ),
-            Spacer(),
-            TabsWeb(
-              "Works",
-              route: "/work",
-            ),
-            Spacer(),
-            TabsWeb(
-              "Blogs",
-              route: "/blog",
-            ),
-            Spacer(),
-            TabsWeb(
-              "About",
-              route: "/about",
-            ),
-            Spacer(),
-            TabsWeb(
-              "Contact",
-              route: "/contact",
-            ),
-            Spacer()
-          ],
-        ),
+        title: Appbar()
       ),
       body: ListView(
         children: [

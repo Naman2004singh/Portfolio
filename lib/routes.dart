@@ -19,16 +19,18 @@ class Routes {
                     }
                   },
                 ));
-          case "/contact":
-          return MaterialPageRoute(
+      case "/contact":
+        return MaterialPageRoute(
             settings: settings,
-            builder: (_) => LayoutBuilder(builder: (context, constraints) {
-              if (constraints.maxWidth > 800) {
-                return ContactWeb();
-              }else{
-                return ContactMobile();
-              }
-            },))
+            builder: (_) => LayoutBuilder(
+                  builder: (context, constraints) {
+                    if (constraints.maxWidth > 800) {
+                      return ContactWeb();
+                    } else {
+                      return ContactMobile();
+                    }
+                  },
+                ));
       default:
         return MaterialPageRoute(
             settings: settings,
