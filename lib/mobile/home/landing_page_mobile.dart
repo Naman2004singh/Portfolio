@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/mobile/home/aboutMobile.dart';
+import 'package:portfolio/mobile/home/contactMeMobile.dart';
 import 'package:portfolio/mobile/home/landingmobile.dart';
 import 'package:portfolio/mobile/home/whatIdoMobile.dart';
 import 'package:portfolio/utilsMobile/mobiledrawer.dart';
@@ -26,7 +27,7 @@ class _LandingPageMobileState extends State<LandingPageMobile> {
         screenWidthMobile: deviceWidthMobile,
       ),
       body: ListView(
-        children: const [
+        children: [
           //Intro Section
           Landingmobile(),
           SizedBox(
@@ -38,7 +39,15 @@ class _LandingPageMobileState extends State<LandingPageMobile> {
             height: 60.0,
           ),
           //What I do?
-          Whatidomobile()
+          Whatidomobile(),
+          SizedBox(height: 60.0),
+          //Contact Section
+          Contactmemobile(
+            screeenWidthMobile: deviceWidthMobile,
+          ),
+          SizedBox(
+            height: 30.0,
+          )
         ],
       ),
     );
