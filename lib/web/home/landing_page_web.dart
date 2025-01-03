@@ -36,15 +36,30 @@ class _LandingPageWebState extends State<LandingPageWeb> {
             Spacer(
               flex: 2,
             ),
-            TabsWeb("Home"),
+            TabsWeb(
+              "Home",
+              route: "/",
+            ),
             Spacer(),
-            TabsWeb("Works"),
+            TabsWeb(
+              "Works",
+              route: "/work",
+            ),
             Spacer(),
-            TabsWeb("Blogs"),
+            TabsWeb(
+              "Blogs",
+              route: "/blog",
+            ),
             Spacer(),
-            TabsWeb("About"),
+            TabsWeb(
+              "About",
+              route: "/about",
+            ),
             Spacer(),
-            TabsWeb("Contact"),
+            TabsWeb(
+              "Contact",
+              route: "/contact",
+            ),
             Spacer()
           ],
         ),
@@ -120,7 +135,8 @@ class _LandingPageWebState extends State<LandingPageWeb> {
                     backgroundColor: Colors.black,
                     radius: 183.0,
                     child: CircleAvatar(
-                      backgroundImage: AssetImage("assets/images/circleImage.png"),
+                      backgroundImage:
+                          AssetImage("assets/images/circleImage.png"),
                       radius: 180,
                     ),
                   ),

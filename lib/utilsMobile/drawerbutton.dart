@@ -13,7 +13,9 @@ class Drawerbutton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialButton(
-      onPressed: () {},
+      onPressed: () {
+        Navigator.pushNamed(context, routes);
+      },
       elevation: 20,
       color: buttonColor,
       height: 50.0,

@@ -56,7 +56,9 @@ class Contactme extends StatelessWidget {
             maxlines: 10,
           ),
           Materialbutton(buttonHeight: 60.0, minButtonWidth: 200.0),
-          SizedBox(height: 20.0,)
+          SizedBox(
+            height: 20.0,
+          )
         ],
       ),
     );

@@ -3,7 +3,8 @@ import 'package:google_fonts/google_fonts.dart';
 
 class TabsWeb extends StatefulWidget {
   final title;
-  const TabsWeb(this.title, {super.key});
+  final route;
+  const TabsWeb(this.title, {super.key, required this.route});
 
   @override
   State<TabsWeb> createState() => _TabsWebState();
@@ -13,36 +14,39 @@ class _TabsWebState extends State<TabsWeb> {
   bool isSelected = false;
   @override
   Widget build(BuildContext context) {
-    return MouseRegion(
-      onEnter: (_) {
-        setState(() {
-          isSelected = true;
-        });
-        // print("Entered");
-      },
-      onExit: (_) {
-        setState(() {
-          isSelected = false;
-        });
-        // print("Exit");
-      },
-      child: AnimatedDefaultTextStyle(
-        duration: Duration(microseconds: 500),
-        curve: Curves.elasticOut,
-        style: isSelected
-            ? GoogleFonts.roboto(
-                shadows: [Shadow(color: Colors.black, offset: Offset(0, -5))],
-                color: Colors.transparent,
-                fontSize: 25.0,
-                decoration: TextDecoration.underline,
-                decorationThickness: 2,
-                decorationColor: Colors.tealAccent)
-            : GoogleFonts.roboto(
-                color: Colors.black,
-                fontSize: 23.0,
-              ),
-        child: Text(
-          widget.title,
+    return GestureDetector(
+      onTap: () => Navigator.pushNamed(context, widget.route),
+      child: MouseRegion(
+        onEnter: (_) {
+          setState(() {
+            isSelected = true;
+          });
+          // print("Entered");
+        },
+        onExit: (_) {
+          setState(() {
+            isSelected = false;
+          });
+          // print("Exit");
+        },
+        child: AnimatedDefaultTextStyle(
+          duration: Duration(microseconds: 5000),
+          curve: Curves.elasticOut,
+          style: isSelected
+              ? GoogleFonts.roboto(
+                  shadows: [Shadow(color: Colors.black, offset: Offset(0, -5))],
+                  color: Colors.transparent,
+                  fontSize: 25.0,
+                  decoration: TextDecoration.underline,
+                  decorationThickness: 2,
+                  decorationColor: Colors.tealAccent)
+              : GoogleFonts.roboto(
+                  color: Colors.black,
+                  fontSize: 23.0,
+                ),
+          child: Text(
+            widget.title,
+          ),
         ),
       ),
     );
@@ -94,7 +98,8 @@ class BorderText extends StatelessWidget {
   final textData;
   final double hPadding;
   final double vPadding;
-  const BorderText(this.textData, {super.key, required this.hPadding, required this.vPadding});
+  const BorderText(this.textData,
+      {super.key, required this.hPadding, required this.vPadding});
 
   @override
   Widget build(BuildContext context) {

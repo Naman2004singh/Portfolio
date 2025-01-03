@@ -38,7 +38,8 @@ class Contactmemobile extends StatelessWidget {
           width: screeenWidthMobile / 1.4,
           maxlines: 10,
         ),
-        Materialbutton(buttonHeight: 60.0, minButtonWidth: 200.0),
+        Materialbutton(
+            buttonHeight: 60.0, minButtonWidth: screeenWidthMobile / 2.2),
       ],
     );
   }
