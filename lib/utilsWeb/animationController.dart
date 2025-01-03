@@ -6,12 +6,14 @@ class CardAnimation extends StatefulWidget {
   final text;
   final fit;
   final reverse;
+  final width;
+  final height;
   const CardAnimation(
       {super.key,
       this.fit,
       required this.imagePath,
       required this.text,
-      this.reverse});
+      this.reverse, this.width, this.height});
 
   @override
   State<CardAnimation> createState() => _CardAnimationState();
@@ -52,8 +54,8 @@ class _CardAnimationState extends State<CardAnimation>
             children: [
               Image.asset(
                 widget.imagePath,
-                height: 200,
-                width: 200,
+                height: widget.height ?? 200,
+                width: widget.width ?? 200,
                 fit: widget.fit == null ? null : BoxFit.contain,
               ),
               SizedBox(

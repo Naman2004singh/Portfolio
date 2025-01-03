@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/mobile/home/aboutMobile.dart';
 import 'package:portfolio/mobile/home/landingmobile.dart';
+import 'package:portfolio/mobile/home/whatIdoMobile.dart';
 import 'package:portfolio/utilsMobile/mobiledrawer.dart';
 
 class LandingPageMobile extends StatefulWidget {
@@ -35,7 +36,9 @@ class _LandingPageMobileState extends State<LandingPageMobile> {
           Aboutmobile(),
           SizedBox(
             height: 60.0,
-          )
+          ),
+          //What I do?
+          Whatidomobile()
         ],
       ),
     );
