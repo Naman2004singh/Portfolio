@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/components.dart';
 import 'package:portfolio/mobile/blogs/blogPost.dart';
-import 'package:portfolio/utilsMobile/mobiledrawer.dart';
 import 'package:portfolio/utilsWeb/appBar.dart';
 
 class BlogWeb extends StatefulWidget {
