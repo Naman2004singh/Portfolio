@@ -89,7 +89,7 @@ class Sans extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text(text, style: GoogleFonts.openSans(fontSize: size));
+    return Text(text.toString(), style: GoogleFonts.openSans(fontSize: size));
   }
 }
 

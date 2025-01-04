@@ -63,6 +63,7 @@ class Routes {
                 ));
       case "/work":
         return MaterialPageRoute(
+          settings: settings,
             builder: (_) => LayoutBuilder(
                   builder: (context, constraints) {
                     if (constraints.maxWidth > 800) {
