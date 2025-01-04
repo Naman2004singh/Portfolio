@@ -10,6 +10,6 @@ class BlogWeb extends StatefulWidget {
 class _BlogWebState extends State<BlogWeb> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return ;
   }
 }
