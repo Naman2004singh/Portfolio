@@ -41,7 +41,7 @@ class _CardAnimationState extends State<CardAnimation>
     return SlideTransition(
       position: _animation,
       child: Card(
-        color: Colors.white,
+        //color: Colors.white,
         elevation: 30.0,
         shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(15.0),

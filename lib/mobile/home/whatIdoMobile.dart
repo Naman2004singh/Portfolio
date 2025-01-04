@@ -17,7 +17,7 @@ class _WhatidomobileState extends State<Whatidomobile> {
       children: const [
         SansBold("What I do?", 35),
         CardAnimation(
-          imagePath: "assets/images/web.jpg",
+          imagePath: "assets/images/web.png",
           text: "Web development",
           width: 300,
         ),

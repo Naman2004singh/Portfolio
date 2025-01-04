@@ -113,7 +113,7 @@ class _AboutWebScreenState extends State<AboutWebScreen> {
               children: [
                 CardAnimation(
                     width: 250.0,
-                    imagePath: "assets/images/web.jpg",
+                    imagePath: "assets/images/web.png",
                     text: "Web development"),
                 Wrap(
                   direction: Axis.vertical,
@@ -169,7 +169,7 @@ class _AboutWebScreenState extends State<AboutWebScreen> {
                     SizedBox(
                       height: 15.0,
                     ),
-                    Sans(15, "Do you want yur back-end to be highly"),
+                    Sans(15, "Do you want your back-end to be highly"),
                     Sans(15, "scalable and secure? Let's have a"),
                     Sans(15, "conversation on how i can help you with \nthat"),
                   ],

@@ -18,7 +18,7 @@ class Whatido extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               CardAnimation(
-                imagePath: "assets/images/web.jpg",
+                imagePath: "assets/images/web.png",
                 text: "Web development",
               ),
               CardAnimation(
