@@ -32,6 +32,7 @@ class Textfield extends StatelessWidget {
                 FilteringTextInputFormatter.allow(RegExp('[a-z A-Z0-9@.]')),
                 LengthLimitingTextInputFormatter(50)
               ],
+              // ignore: body_might_complete_normally_nullable
               validator: (text) {
                 if (RegExp("\\bnaman\\b", caseSensitive: false)
                     .hasMatch(text.toString())) {
