@@ -17,6 +17,7 @@ class _LandingPageMobileState extends State<LandingPageMobile> {
   Widget build(BuildContext context) {
     var deviceWidthMobile = MediaQuery.of(context).size.width;
     return Scaffold(
+      extendBodyBehindAppBar: true,
       backgroundColor: Colors.white,
       appBar: AppBar(
         backgroundColor: Colors.transparent,
