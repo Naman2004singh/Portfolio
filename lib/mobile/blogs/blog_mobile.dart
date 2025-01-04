@@ -28,7 +28,7 @@ class _BlogMobileState extends State<BlogMobile> {
                 bottom: PreferredSize(
                     preferredSize: Size(screenWidth / 1.5, screenWidth / 3),
                     child: Container(
-                      margin: EdgeInsets.only(bottom: 20.0),
+                      margin: EdgeInsets.all(20.0),
                       padding:
                           EdgeInsets.symmetric(horizontal: 10.0, vertical: 5.0),
                       decoration: BoxDecoration(
