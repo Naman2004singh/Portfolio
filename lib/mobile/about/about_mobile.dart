@@ -17,6 +17,7 @@ class _AboutMobileScreenState extends State<AboutMobileScreen> {
       extendBodyBehindAppBar: true,
       backgroundColor: Colors.white,
       appBar: AppBar(
+        backgroundColor: Colors.transparent,
         iconTheme: IconThemeData(color: Colors.black, size: 25.0),
       ),
       endDrawer: Mobiledrawer(),
@@ -24,7 +25,7 @@ class _AboutMobileScreenState extends State<AboutMobileScreen> {
         padding: EdgeInsets.symmetric(horizontal: 30.0, vertical: 20.0),
         children: const [
           SizedBox(
-            height: 40.0,
+            height: 90.0,
           ),
           CircleAvatar(
             backgroundColor: Colors.tealAccent,
@@ -38,54 +39,47 @@ class _AboutMobileScreenState extends State<AboutMobileScreen> {
               ),
             ),
           ),
+          SizedBox(
+            height: 40.0,
+          ),
+          SansBold("About Me", 40),
+          SizedBox(
+            height: 15.0,
+          ),
+          Sans(15,
+              '''Hello I'm Naman Singh I specilized in flutter development"I strive to ensure astounding performance with states ofthe art of security for Android, iOS, Web, Mac, Linux, and Window'''),
+          SizedBox(
+            height: 10,
+          ),
           Wrap(
-            alignment: WrapAlignment.start,
-            direction: Axis.vertical,
+            spacing: 10.0,
+            runSpacing: 10.0,
             children: [
-              SansBold("About Me", 40),
-              SizedBox(
-                height: 15.0,
+              BorderText(
+                "Flutter",
+                hPadding: 8,
+                vPadding: 6,
               ),
-              Sans(15,
-                  "Hello I'm Naman Singh I specilized in flutter development"),
-              Sans(15,
-                  "I strive to ensure astounding performance with states of"),
-              Sans(15,
-                  "the art of security for Android, iOS, Web, Mac, Linux, and Window"),
-              SizedBox(
-                height: 10,
+              BorderText(
+                "firebase",
+                hPadding: 8,
+                vPadding: 6,
               ),
-              Wrap(
-                spacing: 10.0,
-                runSpacing: 10.0,
-                children: [
-                  BorderText(
-                    "Flutter",
-                    hPadding: 8,
-                    vPadding: 6,
-                  ),
-                  BorderText(
-                    "firebase",
-                    hPadding: 8,
-                    vPadding: 6,
-                  ),
-                  BorderText(
-                    "Android",
-                    hPadding: 8,
-                    vPadding: 6,
-                  ),
-                  BorderText(
-                    "iOS",
-                    hPadding: 8,
-                    vPadding: 6,
-                  ),
-                  BorderText(
-                    "Windows",
-                    hPadding: 8,
-                    vPadding: 6,
-                  ),
-                ],
-              )
+              BorderText(
+                "Android",
+                hPadding: 8,
+                vPadding: 6,
+              ),
+              BorderText(
+                "iOS",
+                hPadding: 8,
+                vPadding: 6,
+              ),
+              BorderText(
+                "Windows",
+                hPadding: 8,
+                vPadding: 6,
+              ),
             ],
           ),
           SizedBox(

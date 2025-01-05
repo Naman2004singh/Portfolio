@@ -37,13 +37,13 @@ class _BlogMobileState extends State<BlogMobile> {
                       child: SansBoldColor(
                         color: Colors.white,
                         text: "Welcome to my blog",
-                        size: 40.0,
+                        size: 30.0,
                       ),
                     )),
                 iconTheme: IconThemeData(size: 35.0, color: Colors.black),
                 flexibleSpace: FlexibleSpaceBar(
                   background: Image.asset(
-                    "images/blog.jpg",
+                    "assets/images/blog.jpg",
                     fit: BoxFit.cover,
                   ),
                 ),

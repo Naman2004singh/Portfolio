@@ -26,7 +26,7 @@ class _ContactMobileState extends State<ContactMobile> {
                 backgroundColor: Colors.white,
                 flexibleSpace: FlexibleSpaceBar(
                   background: Image.asset(
-                    "images/contact_image.jpg",
+                    "assets/images/contact_image.jpg",
                     fit: BoxFit.cover,
                   ),
                 ),

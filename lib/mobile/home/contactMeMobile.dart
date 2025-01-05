@@ -4,7 +4,7 @@ import 'package:portfolio/utilsWeb/buttons.dart';
 import 'package:portfolio/utilsWeb/textField.dart';
 
 class Contactmemobile extends StatelessWidget {
-  final double screeenWidthMobile;
+  final screeenWidthMobile;
   const Contactmemobile({super.key, required this.screeenWidthMobile});
 
   @override

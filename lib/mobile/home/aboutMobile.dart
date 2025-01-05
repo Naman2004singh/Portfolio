@@ -12,13 +12,15 @@ class Aboutmobile extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.center,
         children: const [
-          SansBold("About Me", 35),
+          SansBold("About Me", 35.0),
           SizedBox(
             height: 15,
           ),
-          Sans(15, "Hello I'm Naman Singh I specilized in flutter development"),
-          Sans(15, "I strive to ensure astounding performance with states of"),
-          Sans(15,
+          Sans(15.0,
+              "Hello I'm Naman Singh I specilized in flutter development"),
+          Sans(
+              15.0, "I strive to ensure astounding performance with states of"),
+          Sans(15.0,
               "the art of security for Android, iOS, Web, Mac, Linux, and Window"),
           SizedBox(
             height: 10,
@@ -29,40 +31,40 @@ class Aboutmobile extends StatelessWidget {
             children: [
               BorderText(
                 "Flutter",
-                hPadding: 9,
-                vPadding: 7,
+                hPadding: 9.0,
+                vPadding: 7.0,
               ),
               SizedBox(
                 height: 10.0,
               ),
               BorderText(
                 "Firebase",
-                hPadding: 9,
-                vPadding: 7,
+                hPadding: 9.0,
+                vPadding: 7.0,
               ),
               SizedBox(
                 height: 10.0,
               ),
               BorderText(
                 "Android",
-                hPadding: 9,
-                vPadding: 7,
+                hPadding: 9.0,
+                vPadding: 7.0,
               ),
               SizedBox(
                 height: 10.0,
               ),
               BorderText(
                 "iOS",
-                hPadding: 9,
-                vPadding: 7,
+                hPadding: 9.0,
+                vPadding: 7.0,
               ),
               SizedBox(
                 height: 10.0,
               ),
               BorderText(
                 "Windows",
-                hPadding: 9,
-                vPadding: 7,
+                hPadding: 9.0,
+                vPadding: 7.0,
               ),
               SizedBox(
                 height: 10.0,

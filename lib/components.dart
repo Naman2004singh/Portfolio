@@ -54,8 +54,8 @@ class _TabsWebState extends State<TabsWeb> {
 }
 
 class SansBold extends StatelessWidget {
-  final text;
-  final size;
+  final String text;
+  final double? size;
   const SansBold(this.text, this.size, {super.key});
 
   @override
@@ -83,8 +83,8 @@ class SansBoldColor extends StatelessWidget {
 }
 
 class Sans extends StatelessWidget {
-  final text;
-  final size;
+  final String text;
+  final double? size;
   const Sans(this.size, this.text, {super.key});
 
   @override
@@ -95,7 +95,7 @@ class Sans extends StatelessWidget {
 
 // Bordered text
 class BorderText extends StatelessWidget {
-  final textData;
+  final String textData;
   final double hPadding;
   final double vPadding;
   const BorderText(this.textData,
