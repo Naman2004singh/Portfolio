@@ -12,28 +12,31 @@ class WorksMobile extends StatefulWidget {
 class _WorksMobileState extends State<WorksMobile> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.white,
-      extendBodyBehindAppBar: true,
-      endDrawer: Mobiledrawer(),
-      body: NestedScrollView(
-          headerSliverBuilder: (context, innerBoxIsScrolled) {
-            return <Widget>[
-              SliverAppBar(
-                flexibleSpace: FlexibleSpaceBar(
-                  background: Image.asset(
-                    "assets/images/works.jpg",
-                    fit: BoxFit.cover,
+    return SafeArea(
+      child: Scaffold(
+        backgroundColor: Colors.white,
+        extendBodyBehindAppBar: true,
+        endDrawer: Mobiledrawer(),
+        body: NestedScrollView(
+            headerSliverBuilder: (context, innerBoxIsScrolled) {
+              return <Widget>[
+                SliverAppBar(
+                  iconTheme: IconThemeData(size: 35.0,color: Colors.black),
+                  flexibleSpace: FlexibleSpaceBar(
+                    background: Image.asset(
+                      "assets/images/works.jpg",
+                      fit: BoxFit.cover,
+                    ),
                   ),
-                ),
-                expandedHeight: 500,
-              )
-            ];
-          },
-          body: ListView(
-            padding: EdgeInsets.all(20.0),
-            children: const [WorkdoneMobile()],
-          )),
+                  expandedHeight: 500,
+                )
+              ];
+            },
+            body: ListView(
+              padding: EdgeInsets.all(20.0),
+              children: const [WorkdoneMobile()],
+            )),
+      ),
     );
   }
 }

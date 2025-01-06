@@ -13,32 +13,34 @@ class _ContactMobileState extends State<ContactMobile> {
   @override
   Widget build(BuildContext context) {
     var widthMobile = MediaQuery.of(context).size.width;
-    return Scaffold(
-      extendBodyBehindAppBar: true,
-      backgroundColor: Colors.white,
-      endDrawer: Mobiledrawer(),
-      body: NestedScrollView(
-          headerSliverBuilder: (context, innerBoxIsScrolled) {
-            return <Widget>[
-              SliverAppBar(
-                expandedHeight: 400.0,
-                iconTheme: IconThemeData(size: 25.0, color: Colors.black),
-                backgroundColor: Colors.white,
-                flexibleSpace: FlexibleSpaceBar(
-                  background: Image.asset(
-                    "assets/images/contact_image.jpg",
-                    fit: BoxFit.cover,
+    return SafeArea(
+      child: Scaffold(
+        extendBodyBehindAppBar: true,
+        backgroundColor: Colors.white,
+        endDrawer: Mobiledrawer(),
+        body: NestedScrollView(
+            headerSliverBuilder: (context, innerBoxIsScrolled) {
+              return <Widget>[
+                SliverAppBar(
+                  expandedHeight: 400.0,
+                  iconTheme: IconThemeData(size: 35.0, color: Colors.black),
+                  backgroundColor: Colors.white,
+                  flexibleSpace: FlexibleSpaceBar(
+                    background: Image.asset(
+                      "assets/images/contact_image.jpg",
+                      fit: BoxFit.cover,
+                    ),
                   ),
-                ),
-              )
-            ];
-          },
-          body: SingleChildScrollView(
-            child: Padding(
-              padding: const EdgeInsets.symmetric(vertical: 20.0),
-              child: Contactmemobile(screeenWidthMobile: widthMobile),
-            ),
-          )),
+                )
+              ];
+            },
+            body: SingleChildScrollView(
+              child: Padding(
+                padding: const EdgeInsets.symmetric(vertical: 20.0),
+                child: Contactmemobile(screeenWidthMobile: widthMobile),
+              ),
+            )),
+      ),
     );
   }
 }
