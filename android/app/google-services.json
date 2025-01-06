@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "990155202464",
+    "project_id": "naman-portfolio-62a59",
+    "storage_bucket": "naman-portfolio-62a59.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:990155202464:android:0c9247419249cf33f1cec5",
+        "android_client_info": {
+          "package_name": "com.example.portfolio"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD-eq-M1ifbQNUDgXp3pRlqIAXTD06ieoI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

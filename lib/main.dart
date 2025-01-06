@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/routes.dart';
 import 'package:url_strategy/url_strategy.dart';
+import 'package:firebase_core/firebase_core.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   setPathUrlStrategy();
   runApp(const MyApp());
 }
