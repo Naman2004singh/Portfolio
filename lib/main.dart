@@ -5,6 +5,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/foundation.dart' show kIsWeb;
 
 void main() async {
+    setPathUrlStrategy();
   WidgetsFlutterBinding.ensureInitialized();
   if (kIsWeb) {
     await Firebase.initializeApp(
@@ -19,7 +20,6 @@ void main() async {
   } else {
     await Firebase.initializeApp();
   }
-  setPathUrlStrategy();
   runApp(const MyApp());
 }
 
