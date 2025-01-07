@@ -3,7 +3,9 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:portfolio/components.dart';
 
 class Blogpost extends StatefulWidget {
-  const Blogpost({super.key});
+  final title;
+  final body;
+  const Blogpost({super.key,required this.body,required this.title});
 
   @override
   State<Blogpost> createState() => _BlogpostState();
@@ -32,7 +34,7 @@ class _BlogpostState extends State<Blogpost> {
                     color: Colors.black,
                     borderRadius: BorderRadius.circular(8.0)),
                 child: SansBoldColor(
-                    color: Colors.white, size: 25.0, text: "Who is Dash?"),
+                    color: Colors.white, size: 25.0, text: widget.title.toString()),
               ),
               IconButton(
                   onPressed: () {
@@ -49,11 +51,7 @@ class _BlogpostState extends State<Blogpost> {
           SizedBox(
             height: 10.0,
           ),
-          Text(
-            '''As soon as Shams Zakhour started working as a Dart writer at Google in December 2013, she started advocating for a Dart mascot. After documenting Java for 14 years, she had observed how beloved the Java mascot, Duke, had become, and she wanted something similar for Dart.
-But the idea didn't gain momentum until 2017, when one of the Flutter engineers, Nina Chen, suggested it on an internal mailing list. The Flutter VP at the time, Joshy Joseph, approved the idea and asked the organizer for the 2018 Dart Conference, Linda Rasmussen, to make it happen.
-Once Shams heard about these plans, she rushed to Linda and asked to own and drive the project to produce the plushies for the conference. Linda had already elicited some design sketches, which she handed off. Starting with the sketches, Shams located a vendor who could work within an aggressive deadline (competing with Lunar New Year), and started the process of creating the specs for the plushy.
-That's right, Dash was originally a Dart mascot, not a Flutter mascot.''',
+          Text(widget.body.toString(),
             style: GoogleFonts.openSans(fontSize: 15.0),
             maxLines: expand == true ? null : 3,
             overflow:

@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:portfolio/components.dart';
 import 'package:portfolio/mobile/blogs/blogPost.dart';
@@ -12,13 +13,15 @@ class BlogWeb extends StatefulWidget {
 }
 
 class _BlogWebState extends State<BlogWeb> {
-  @override
-  void initState() {
-    super.initState();
-    //article();
-    streamArticles();
-  }
+  // @override
+  // void initState() {
+  //   super.initState();
+  //   //article();
+  //   streamArticles();
+  // }
 
+  // List title = ["Who is dash?", "Who is dash2?"];
+  // List body = ["Use google", "Google it"];
   @override
   Widget build(BuildContext context) {
     var screenHeight = MediaQuery.of(context).size.height;
@@ -58,9 +61,27 @@ class _BlogWebState extends State<BlogWeb> {
               )
             ];
           },
-          body: ListView(
-            children: const [Blogpost(), Blogpost(), Blogpost()],
-          )),
+          body: StreamBuilder<QuerySnapshot>(
+              stream:
+                  FirebaseFirestore.instance.collection("articles").snapshots(),
+              builder: (context, snapshot) {
+                if (snapshot.hasData) {
+                  return ListView.builder(
+                    itemCount: snapshot.data!.docs.length,
+                    itemBuilder: (context, index) {
+                      DocumentSnapshot documentSnapshot =
+                          snapshot.data!.docs[index];
+                      return Blogpost(
+                          body: documentSnapshot["body"],
+                          title: documentSnapshot["title"]);
+                    },
+                  );
+                } else {
+                  return Center(
+                    child: CircularProgressIndicator(),
+                  );
+                }
+              })),
     ));
   }
 }

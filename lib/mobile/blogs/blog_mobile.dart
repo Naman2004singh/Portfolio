@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:portfolio/components.dart';
 import 'package:portfolio/mobile/blogs/blogPost.dart';
@@ -58,9 +59,27 @@ class _BlogMobileState extends State<BlogMobile> {
               )
             ];
           },
-          body: ListView(
-            children: const [Blogpost(), Blogpost(), Blogpost()],
-          )),
+          body: StreamBuilder<QuerySnapshot>(
+              stream:
+                  FirebaseFirestore.instance.collection("articles").snapshots(),
+              builder: (context, snapshot) {
+                if (snapshot.hasData) {
+                  return ListView.builder(
+                    itemCount: snapshot.data!.docs.length,
+                    itemBuilder: (context, index) {
+                      DocumentSnapshot documentSnapshot =
+                          snapshot.data!.docs[index];
+                      return Blogpost(
+                          body: documentSnapshot["body"],
+                          title: documentSnapshot["title"]);
+                    },
+                  );
+                } else {
+                  return Center(
+                    child: CircularProgressIndicator(),
+                  );
+                }
+              })),
     ));
   }
 }
