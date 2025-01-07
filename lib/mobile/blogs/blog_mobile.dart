@@ -15,7 +15,8 @@ class _BlogMobileState extends State<BlogMobile> {
   @override
   void initState() {
     super.initState();
-    article();
+    //article();
+    streamArticles();
   }
 
   @override

@@ -15,7 +15,8 @@ class _BlogWebState extends State<BlogWeb> {
   @override
   void initState() {
     super.initState();
-    article();
+    //article();
+    streamArticles();
   }
 
   @override
