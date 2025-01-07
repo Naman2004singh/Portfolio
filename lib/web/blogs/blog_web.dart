@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/components.dart';
 import 'package:portfolio/mobile/blogs/blogPost.dart';
+import 'package:portfolio/mobile/blogs/data_from_fire.dart';
 import 'package:portfolio/utilsWeb/appBar.dart';
 
 class BlogWeb extends StatefulWidget {
@@ -11,6 +12,12 @@ class BlogWeb extends StatefulWidget {
 }
 
 class _BlogWebState extends State<BlogWeb> {
+  @override
+  void initState() {
+    super.initState();
+    article();
+  }
+
   @override
   Widget build(BuildContext context) {
     var screenHeight = MediaQuery.of(context).size.height;

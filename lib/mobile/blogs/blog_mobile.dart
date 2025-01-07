@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/components.dart';
 import 'package:portfolio/mobile/blogs/blogPost.dart';
+import 'package:portfolio/mobile/blogs/data_from_fire.dart';
 import 'package:portfolio/utilsMobile/mobiledrawer.dart';
 
 class BlogMobile extends StatefulWidget {
@@ -11,6 +12,12 @@ class BlogMobile extends StatefulWidget {
 }
 
 class _BlogMobileState extends State<BlogMobile> {
+  @override
+  void initState() {
+    super.initState();
+    article();
+  }
+
   @override
   Widget build(BuildContext context) {
     var screenWidth = MediaQuery.of(context).size.width;
