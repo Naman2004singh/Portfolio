@@ -114,7 +114,7 @@ class Contactme extends StatelessWidget {
               height: 60,
               minWidth: 160,
               color: Colors.tealAccent,
-              child: SansBold("Submit", 20),
+              child: Center(child: SansBold("Submit", 20)),
             ),
             SizedBox(
               height: 20.0,
