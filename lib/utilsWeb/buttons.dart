@@ -4,13 +4,19 @@ import 'package:portfolio/components.dart';
 class Materialbutton extends StatelessWidget {
   final double buttonHeight;
   final double minButtonWidth;
-  const Materialbutton(
-      {super.key, required this.buttonHeight, required this.minButtonWidth});
-
+  final getMessagedata;
+  Materialbutton(
+      {super.key,
+      required this.buttonHeight,
+      required this.minButtonWidth,
+      this.getMessagedata});
   @override
   Widget build(BuildContext context) {
     return MaterialButton(
-      onPressed: () {},
+      onPressed: () {
+        //logger.d(getMessagedata);
+        print("MEssage is:$getMessagedata");
+      },
       elevation: 20.0,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.0)),
       height: buttonHeight,

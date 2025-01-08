@@ -13,15 +13,13 @@ class BlogWeb extends StatefulWidget {
 }
 
 class _BlogWebState extends State<BlogWeb> {
-  @override
-  void initState() {
-    super.initState();
-    //article();
-    streamArticles();
-  }
+  // @override
+  // void initState() {
+  //   super.initState();
+  //   //article();
+  //   streamArticles();
+  // }
 
-  // List title = ["Who is dash?", "Who is dash2?"];
-  // List body = ["Use google", "Google it"];
   @override
   Widget build(BuildContext context) {
     var screenHeight = MediaQuery.of(context).size.height;

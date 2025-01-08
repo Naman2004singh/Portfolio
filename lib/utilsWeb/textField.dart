@@ -8,12 +8,13 @@ class Textfield extends StatelessWidget {
   final hintLabel;
   final width;
   final maxlines;
+  final controller;
   const Textfield(
       {super.key,
       required this.hintLabel,
       required this.hintText,
       required this.width,
-      this.maxlines});
+      this.maxlines, this.controller});
 
   @override
   Widget build(BuildContext context) {
@@ -32,6 +33,7 @@ class Textfield extends StatelessWidget {
                 FilteringTextInputFormatter.allow(RegExp('[a-z A-Z0-9@.]')),
                 LengthLimitingTextInputFormatter(50)
               ],
+              controller: controller,
               // ignore: body_might_complete_normally_nullable
               validator: (text) {
                 if (RegExp("\\bnaman\\b", caseSensitive: false)
@@ -46,9 +48,8 @@ class Textfield extends StatelessWidget {
                       borderRadius: BorderRadius.circular(10.0),
                       borderSide: BorderSide(color: Colors.red)),
                   errorBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(10.0),
-                    borderSide: BorderSide(color: Colors.red)
-                  ),
+                      borderRadius: BorderRadius.circular(10.0),
+                      borderSide: BorderSide(color: Colors.red)),
                   enabledBorder: OutlineInputBorder(
                       borderSide: BorderSide(color: Colors.teal, width: 1),
                       borderRadius: BorderRadius.circular(10.0)),
