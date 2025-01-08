@@ -9,12 +9,15 @@ class Textfield extends StatelessWidget {
   final width;
   final maxlines;
   final controller;
+  final validators;
   const Textfield(
       {super.key,
       required this.hintLabel,
       required this.hintText,
       required this.width,
-      this.maxlines, this.controller});
+      this.maxlines,
+      this.controller,
+      this.validators});
 
   @override
   Widget build(BuildContext context) {
@@ -34,13 +37,7 @@ class Textfield extends StatelessWidget {
                 LengthLimitingTextInputFormatter(50)
               ],
               controller: controller,
-              // ignore: body_might_complete_normally_nullable
-              validator: (text) {
-                if (RegExp("\\bnaman\\b", caseSensitive: false)
-                    .hasMatch(text.toString())) {
-                  return "Match found";
-                }
-              },
+              validator: validators,
               autovalidateMode: AutovalidateMode.onUserInteraction,
               maxLines: maxlines,
               decoration: InputDecoration(

@@ -2,7 +2,6 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:portfolio/components.dart';
 import 'package:portfolio/mobile/blogs/blogPost.dart';
-import 'package:portfolio/mobile/blogs/data_from_fire.dart';
 import 'package:portfolio/utilsWeb/appBar.dart';
 
 class BlogWeb extends StatefulWidget {
