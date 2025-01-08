@@ -112,3 +112,15 @@ class BorderText extends StatelessWidget {
     );
   }
 }
+
+//Error dialog
+Future dialogError(BuildContext context){
+  return showDialog(
+                    context: context,
+                    builder: (context) {
+                      return AlertDialog(
+                        title: SansBold("Message submitted", 20.0),
+                      );
+                    },
+                  );
+}

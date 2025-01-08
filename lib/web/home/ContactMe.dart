@@ -60,8 +60,9 @@ class Contactme extends StatelessWidget {
                         hintLabel: "Email",
                         hintText: "Please type email address",
                         validators: (text) {
-                          if (text.toString().isEmpty) {
-                            return "Email is requried";
+                          if (RegExp("\\bnaman\\b", caseSensitive: false)
+                              .hasMatch(text.toString())) {
+                            return "Match found";
                           }
                         },
                         controller: emaliNameController,
@@ -84,9 +85,8 @@ class Contactme extends StatelessWidget {
               hintLabel: "Message",
               hintText: "Please type your message",
               validators: (text) {
-                if (RegExp("\\bnaman\\b", caseSensitive: false)
-                    .hasMatch(text.toString())) {
-                  return "Match found";
+                if (text.toString().isEmpty) {
+                  return "Message number is requried";
                 }
               },
               controller: messageController,
@@ -104,6 +104,8 @@ class Contactme extends StatelessWidget {
                       emaliNameController.text,
                       phoneController.text,
                       messageController.text);
+                  formKey.currentState!.reset();
+                  dialogError(context);
                 }
               },
               elevation: 20.0,
