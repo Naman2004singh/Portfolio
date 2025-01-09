@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/add_data_to_fire.dart';
 import 'package:portfolio/components.dart';
-import 'package:portfolio/utilsWeb/buttons.dart';
 import 'package:portfolio/utilsWeb/textField.dart';
 import 'package:logger/logger.dart';
 
+// ignore: must_be_immutable
 class Contactmemobile extends StatelessWidget {
   final screeenWidthMobile;
   Contactmemobile({super.key, required this.screeenWidthMobile});
@@ -94,14 +94,18 @@ class Contactmemobile extends StatelessWidget {
               logger.d(firstNameController.text.toString());
               final addData = AddDataToFire();
               if (formKey.currentState!.validate()) {
-                await addData.addResponse(
-                    firstNameController.text,
-                    lastNameController.text,
-                    emaliNameController.text,
-                    phoneController.text,
-                    messageController.text);
-                formKey.currentState!.reset();
-                dialogError(context);
+                if (await addData.addResponse(
+                      firstNameController.text,
+                      lastNameController.text,
+                      emaliNameController.text,
+                      phoneController.text,
+                      messageController.text)) {
+                    formKey.currentState!.reset();
+                    dialogError(context,"Message sent successfully");
+                  }
+                  else{
+                    dialogError(context,"Message failed to sent");
+                  }
               }
             },
             elevation: 20.0,

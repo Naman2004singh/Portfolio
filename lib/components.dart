@@ -114,12 +114,12 @@ class BorderText extends StatelessWidget {
 }
 
 //Error dialog
-Future dialogError(BuildContext context){
+Future dialogError(BuildContext context, String message){
   return showDialog(
                     context: context,
                     builder: (context) {
                       return AlertDialog(
-                        title: SansBold("Message submitted", 20.0),
+                        title: SansBold(message, 20.0),
                       );
                     },
                   );

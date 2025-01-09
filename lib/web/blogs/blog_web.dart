@@ -51,7 +51,7 @@ class _BlogWebState extends State<BlogWeb> {
                 iconTheme: IconThemeData(size: 35.0, color: Colors.black),
                 flexibleSpace: FlexibleSpaceBar(
                   background: Image.asset(
-                    "images/blog.jpg",
+                    "assets/images/blog.jpg",
                     fit: BoxFit.cover,
                   ),
                 ),

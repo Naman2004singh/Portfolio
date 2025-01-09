@@ -31,7 +31,7 @@ class _ContactWebState extends State<ContactWeb> {
                 iconTheme: IconThemeData(size: 25.0, color: Colors.black),
                 flexibleSpace: FlexibleSpaceBar(
                   background: Image.asset(
-                    "images/contact_image.jpg",
+                    "assets/images/contact_image.jpg",
                     fit: BoxFit.cover,
                   ),
                 ),

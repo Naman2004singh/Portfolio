@@ -98,21 +98,25 @@ class Contactme extends StatelessWidget {
                 logger.d(firstNameController.text.toString());
                 final addData = AddDataToFire();
                 if (formKey.currentState!.validate()) {
-                  await addData.addResponse(
+                  if (await addData.addResponse(
                       firstNameController.text,
                       lastNameController.text,
                       emaliNameController.text,
                       phoneController.text,
-                      messageController.text);
-                  formKey.currentState!.reset();
-                  dialogError(context);
+                      messageController.text)) {
+                    formKey.currentState!.reset();
+                    dialogError(context,"Message sent successfully");
+                  }
+                  else{
+                    dialogError(context,"Message failed to sent");
+                  }
                 }
               },
               elevation: 20.0,
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(10.0)),
               height: 60,
-              minWidth: 160,
+              minWidth: messageWidth / 4,
               color: Colors.tealAccent,
               child: Center(child: SansBold("Submit", 20)),
             ),

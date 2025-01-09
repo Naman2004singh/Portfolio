@@ -29,7 +29,7 @@ class _WorksWebState extends State<WorksWeb> {
                 title: Appbar(),
                 flexibleSpace: FlexibleSpaceBar(
                   background: Image.asset(
-                    "images/works.jpg",
+                    "assets/images/works.jpg",
                     fit: BoxFit.cover,
                   ),
                 ),
